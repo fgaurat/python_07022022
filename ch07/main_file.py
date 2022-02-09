@@ -1,6 +1,18 @@
 from pprint import pprint
 
+
+
+
 def main():
+    with open("todos.csv") as fichier: 
+        keys = fichier.readline().strip().split(';')
+        dictionnaire = [dict(zip(keys, line.strip().split(';'))) for line in fichier ]
+    pprint(dictionnaire)    
+
+
+
+
+def main_read_csv():
     all_data = []
 
     with open("todos.csv",'r') as f:
