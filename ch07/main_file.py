@@ -10,12 +10,11 @@ def main():
     
     ma_liste = [f"Valeur {v:02}" for v in range(1,15)]
 
-    
+
     print(ma_liste)    
     with open(nom_fichier,'w') as f:
-        print("Hello world",file=f)
-        print("Hello world",file=f)
-        print("Hello world",file=f)
+        for line in ma_liste:
+            print(line,file=f)
 
 
 if __name__ == '__main__':
