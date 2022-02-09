@@ -24,8 +24,23 @@ def main():
             "id": 4,
             "title": "et porro tempora",
             "completed": True
-        },
+        }
     ]
+
+
+    with open("todos.csv",'w') as f:
+        header = data[0].keys()
+        # h = "{};{};{};{}".format(*header)
+        h = ";".join(header)
+        
+        print(h,file=f)
+
+        for dict_value in data:
+            data_line = [str(d) for d in dict_value.values()]
+            line = ";".join(data_line)
+            print(line,file=f)
+            # print(dict_value['title'])            
+
 
 
 def main_read_file():
