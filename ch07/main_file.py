@@ -1,3 +1,5 @@
+from pprint import pprint
+
 def main():
     all_data = []
 
@@ -18,7 +20,7 @@ def main():
             # print(the_zip)
             # print()
 
-    print(all_data)
+    pprint(all_data)
         #print(data)
         # header  => userId;id;title;completed
         # data[0] => 1;1;delectus aut autem;False
