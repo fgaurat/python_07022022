@@ -1,15 +1,49 @@
 from pprint import pprint
-
-
-
+import json
 
 def main():
+    with open('todos.json','r') as f:
+        data = json.load(f)
+
+    pprint(data)
+
+    
+def main_write_json():
+    data = [
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "delectus aut autem",
+        "completed": False
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "quis ut nam facilis et officia qui",
+        "completed": False
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "fugiat veniam minus",
+        "completed": False
+    },
+    {
+        "userId": 1,
+        "id": 4,
+        "title": "et porro tempora",
+        "completed": True
+    }
+    ]
+    with open('todos.json','w') as f:
+        json.dump(data,f)
+
+
+def main_correction():
     with open("todos.csv") as fichier: 
         keys = fichier.readline().strip().split(';')
         dictionnaire = [dict(zip(keys, line.strip().split(';'))) for line in fichier ]
     pprint(dictionnaire)    
-
-
 
 
 def main_read_csv():
