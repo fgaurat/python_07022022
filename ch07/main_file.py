@@ -1,5 +1,31 @@
-
 def main():
+    all_data = []
+
+    with open("todos.csv",'r') as f:
+        # lines = list(f)
+        lines = [line.strip() for line in f.readlines()]
+    
+        header = lines[0]
+        list_header = header.split(';')
+        data = lines[1:]
+
+        for row in data:
+            list_row = row.split(';')
+            # print(list_header)
+            # print(list_row)
+            the_zip = dict(zip(list_header,list_row))
+            all_data.append(the_zip)
+            # print(the_zip)
+            # print()
+
+    print(all_data)
+        #print(data)
+        # header  => userId;id;title;completed
+        # data[0] => 1;1;delectus aut autem;False
+        # {userId:1,id:1,title:delectus aut autem}
+
+
+def main_write_csv():
     data = [
         {
             "userId": 1,
