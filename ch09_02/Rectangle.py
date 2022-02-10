@@ -1,7 +1,7 @@
+from ICalcGeo import ICalcGeo
 
 
-
-class Rectangle:
+class Rectangle(ICalcGeo):
 
     _cpt=0
 
