@@ -137,6 +137,7 @@ def main_write_file():
     print(ma_liste)
     with open(nom_fichier, 'w') as f:
         for line in ma_liste:
+            # f.write(line+"\n")
             print(line, file=f)
 
 

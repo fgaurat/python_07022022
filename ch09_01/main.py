@@ -8,14 +8,17 @@ def main():
     r1 = Rectangle()# longueur 2 et largeur 3
     print(f"nombre d'objet : {Rectangle.get_cpt()}")
     
-    print(r.get_largeur()) # 3
-    print(r.get_longueur()) # 2
-    r.set_largeur(5)
-    print(r.get_largeur()) # 5
+    
+    print(r.largeur) # 3
+    print(r.longueur) # 2
+    r.largeur = 5
+    print(r.largeur) # 5
 
     print(type(r))
 
-    r.get_surface()
+    print("surface",r.surface)
+    # r.set_surface(12)
+    # r.surface = 12 => pas possible
 
 
     del r1

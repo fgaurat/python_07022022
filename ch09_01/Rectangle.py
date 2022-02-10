@@ -12,19 +12,25 @@ class Rectangle:
         self._largeur = largeur
         Rectangle._cpt+=1
     
-    def get_longueur(self):
+    
+    @property
+    def longueur(self):
         return self._longueur
 
-    def get_largeur(self):
+    @property
+    def largeur(self):
         return self._largeur
 
-    def set_longueur(self,longueur):
+    @longueur.setter
+    def longueur(self,longueur):
         self._longueur = longueur
     
-    def set_largeur(self,largeur):
+    @largeur.setter
+    def largeur(self,largeur):
         self._largeur = largeur
 
-    def get_surface(self):
+    @property
+    def surface(self):
         return self._longueur*self._largeur
 
     def __str__(self) -> str:
