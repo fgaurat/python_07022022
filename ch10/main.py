@@ -4,7 +4,16 @@ import glob
 
 def main():
     logs = sorted(glob.glob('*.log'))
-    print(logs)
+    cpt = 0
+    for log in logs:
+        with open(log) as f:
+            for line in f:
+                line = line.strip()
+                print(line)
+                cpt+=1
+
+    print(cpt)
+
 
 def main_download():
     r = requests.get("https://logs.eolem.com")
