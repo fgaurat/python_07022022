@@ -1,18 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
 import glob
+import re
 
 def main():
     logs = sorted(glob.glob('*.log'))
-    cpt = 0
     for log in logs:
         with open(log) as f:
             for line in f:
                 line = line.strip()
-                print(line)
-                cpt+=1
-
-    print(cpt)
+                # result = re.findall(r'((\d{1,3}\.){3}\d{1,3})',line)
+                result = re.findall(r'^(.+?)\s',line)
+                result_404 = re.findall(r'"\s404',line)
+                if len(result_404)>0:
+                    print(result)
+                    print(result_404)
 
 
 def main_download():
