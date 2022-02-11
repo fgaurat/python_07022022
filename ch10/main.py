@@ -1,9 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
-
-
+import glob
 
 def main():
+    logs = sorted(glob.glob('*.log'))
+    print(logs)
+
+def main_download():
     r = requests.get("https://logs.eolem.com")
     soup = BeautifulSoup(r.text, 'html.parser')
     list_a = soup.find_all('a')

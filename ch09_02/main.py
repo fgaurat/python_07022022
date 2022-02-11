@@ -3,7 +3,7 @@ from Carre import Carre
 from Cercle import Cercle
 from ICalcGeo import ICalcGeo
 
-def show_surface(obj:ICalcGeo):
+def show_surface(obj):
     print("show_surface",obj.surface)
     
 

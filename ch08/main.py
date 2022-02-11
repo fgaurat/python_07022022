@@ -37,6 +37,7 @@ def main():
     except ZeroDivisionError as e:
         print("ZeroDivisionError",e)
         # traceback.print_exc()
+        
     except ValueError as e:
         print("ValueError",e)
     except TypeError as e:
@@ -48,7 +49,6 @@ def main():
         print("else c",c)
     finally:
         print("finally")
-
 
 
     print("fin")

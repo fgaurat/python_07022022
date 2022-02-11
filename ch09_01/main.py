@@ -8,7 +8,7 @@ def main():
     r1 = Rectangle()# longueur 2 et largeur 3
     print(f"nombre d'objet : {Rectangle.get_cpt()}")
     
-    
+    # r.get_largeur()
     print(r.largeur) # 3
     print(r.longueur) # 2
     r.largeur = 5
